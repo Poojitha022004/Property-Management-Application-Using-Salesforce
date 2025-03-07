@@ -1,0 +1,10 @@
+trigger PropertyTrigger on Property__c (before insert) {
+    if(trigger.isUpdate){
+        
+        if(trigger.isBefore){
+            
+            propClass.propMethod(trigger.new);
+            
+        }
+    }
+}
